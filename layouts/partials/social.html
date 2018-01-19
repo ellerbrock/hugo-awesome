@@ -1,0 +1,48 @@
+<nav class="level">
+
+  <!-- Homepage -->
+  {{ with .Site.Author.homepage }}
+    <div class="level-item has-text-centered">
+      <a href="{{ . }}" target="_blank" alt="Homepage">
+        <i class="fa fa-2x  fa-home" aria-hidden="true"></i>
+      </a>
+    </div>
+  {{ end }}
+
+  <!-- GitHub -->
+  {{ with .Site.Author.github }}
+    <div class="level-item has-text-centered">
+      <a href="{{ . }}" target="_blank" alt="Find me on GitHub">
+        <i class="fa fa-2x  fa-github" aria-hidden="true"></i>
+      </a>
+    </div>
+  {{ end }}
+
+  <!-- Twitter -->
+  {{ with .Site.Author.twitter }}
+    <div class="level-item has-text-centered">
+      <a href="{{ . }}" target="_blank" alt="Find me on Twitter">
+        <i class="fa fa-2x  fa-twitter" aria-hidden="true"></i>
+      </a>
+    </div>
+  {{ end }}
+
+  <!-- Facebook -->
+  {{ with .Site.Author.facebook }}
+    <div class="level-item has-text-centered">
+      <a href="{{ . }}" target="_blank" alt="Find me on Facebook">
+        <i class="fa fa-2x  fa-facebook-square" aria-hidden="true"></i>
+      </a>
+    </div>
+  {{ end }}
+
+  <!-- Google+ -->
+  {{ with .Site.Author.googleplus }}
+    <div class="level-item has-text-centered">
+      <a href="{{ . }}" target="_blank" alt="Find me on Google+">
+        <i class="fa fa-2x  fa-google-plus-square" aria-hidden="true"></i>
+      </a>
+    </div>
+  {{ end }}
+
+</nav>

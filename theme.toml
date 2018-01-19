@@ -1,0 +1,13 @@
+name = "Awesome"
+license = "MIT"
+licenselink = "https://github.com/ellerbrock/hugo-awesome/blob/master/LICENSE"
+description = "Responsive Open Source Theme Skeleton"
+homepage = "https://github.com/ellerbrock/hugo-awesome"
+tags = [ "clean", "responsive", "minimal", "starter" ]
+features = [ "bulma" ]
+min_version = "0.24.1"
+
+[author]
+  name = "Maik Ellerbrock"
+  homepage = "https://github.com/ellerbrock"
+

@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+
+{{ range .Data.Pages }}
+<section class="section">
+  <header class="container">
+    <div class="columns">
+      <div class="column is-10">
+        <h1 class="title">{{ .Title }}</h1> {{ if isset .Params "subtitle" }}
+        <h2 class="subtitle">{{ .Params.Subtitle }}</h2> {{ end }}
+      </div>
+      <div class="column is-2">
+        <span class="tag">
+          <time pubdate="pubdate">
+            {{ .Date.Format "2006-01-02" }}
+          </time>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  {{ .Summary }}
+
+  <footer>
+    <a href='{{ .Permalink }}'>
+      <nobr>Read more →</nobr>
+    </a>
+  </footer>
+</section>
+{{ end }}
+
+{{ partial "footer.html" . }}
+

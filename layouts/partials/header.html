@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+
+<head>
+  {{ partial "header.meta.html" . }}
+  <title>{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
+</head>
+
+<body>
+
+  {{ partial "browser.html" }}
+  
+  {{ partial "header.hero.html" . }}
+
+<div class="content">
+

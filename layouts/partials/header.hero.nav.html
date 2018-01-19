@@ -1,0 +1,21 @@
+
+    <div class="nav-right nav-menu menu-header">
+      <ul class="menu">
+        {{ $page := . }}
+        {{ range .Site.Menus.header }}
+          <li class="menu-item">
+            <!-- <a href="{{ .URL }}" class="nav-item{{ if $page.IsMenuCurrent "header" . }} is-active{{ end }}">{{ .Name }}</a> -->
+            <a href="{{ .URL }}" class="nav-item{{ if or ($page.IsMenuCurrent "header" .) ($page.HasMenuCurrent "header" .) }} is-active{{ end }}">{{ .Name | upper}}</a>
+            {{ if .HasChildren }}
+             <ul class="dropdown">
+              {{ range .Children }}
+                <li class="menu-item">
+                  <a href="{{ .URL }}" class="nav-item{{ if or ($page.IsMenuCurrent "header" .) ($page.HasMenuCurrent "header" .) }} is-active{{ end }}">{{ .Name | upper }}</a>
+                </li>
+              {{ end }}
+             </ul>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    </div>

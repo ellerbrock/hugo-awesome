@@ -1,0 +1,108 @@
+<section class="hero is-medium is-gradient">
+  <!-- Hero header: will stick at the top -->
+  <div class="hero-head">
+    <header class="nav">
+      <div class="container">
+        <div class="nav-left">
+          <a href="{{ .Site.BaseURL }}" class="nav-item">
+            {{ .Title }}
+          </a>
+        </div>
+        <span class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <div class="nav-right nav-menu">
+          <!--
+          <a class="nav-item is-active">
+            Home
+          </a>
+        -->
+          <!-- Homepage -->
+          {{ with .Site.Author.homepage }}
+              <a href="{{ . }}" target="_blank" alt="Homepage" class="nav-item">
+                <i class="fa fa-2x  fa-home" aria-hidden="true"></i>
+              </a>
+          {{ end }}
+
+          <!-- GitHub -->
+          {{ with .Site.Author.github }}
+              <a href="{{ . }}" target="_blank" alt="Find me on GitHub" class="nav-item">
+                <i class="fa fa-2x  fa-github" aria-hidden="true"></i>
+              </a>
+          {{ end }}
+
+          <!-- Twitter -->
+          {{ with .Site.Author.twitter }}
+              <a href="{{ . }}" target="_blank" alt="Find me on Twitter" class="nav-item">
+                <i class="fa fa-2x  fa-twitter" aria-hidden="true"></i>
+              </a>
+          {{ end }}
+
+          <!-- Facebook -->
+          {{ with .Site.Author.facebook }}
+              <a href="{{ . }}" target="_blank" alt="Find me on Facebook" class="nav-item">
+                <i class="fa fa-2x  fa-facebook-square" aria-hidden="true"></i>
+              </a>
+          {{ end }}
+
+          <!-- Google+ -->
+          {{ with .Site.Author.googleplus }}
+              <a href="{{ . }}" target="_blank" alt="Find me on Google+" class="nav-item">
+                <i class="fa fa-2x  fa-google-plus-square" aria-hidden="true"></i>
+              </a>
+          {{ end }}
+
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        Title
+      </h1>
+      <h2 class="subtitle">
+        Subtitle
+      </h2>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Overview</a></li>
+          <li><a>Modifiers</a></li>
+          <li><a>Grid</a></li>
+          <li><a>Elements</a></li>
+          <li><a>Components</a></li>
+          <li><a>Layout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+
+<!--
+<section class="hero is-medium is-gradient">
+ <div class="hero-head">
+  <nav class="nav">
+    {{ partial "header.hero.nav.html" . }}
+  </nav>
+ </div>
+
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        {{ .Title }}
+      </h1>
+    </div>
+  </div>
+</section>
+-->

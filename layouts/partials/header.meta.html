@@ -1,0 +1,21 @@
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ if .Description }}
+  <meta name="description" content="{{ .Description }}">
+  {{ end }}
+  {{ if eq .Params.Seo.allowindex false }}
+    <meta name="robots" content="noindex">
+  {{ else }}
+    <meta name="robots" content="index, follow">
+  {{ end }}
+
+  <link rel="shortcut icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <!-- <link rel="stylesheet" href="/css/bulma.css"> -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/font-awesome.css">
+
+  <link rel="canonical" href="{{ .Permalink }}">
+  <base href="{{ .Site.BaseURL }}">

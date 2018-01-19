@@ -1,0 +1,51 @@
+@charset "utf-8"
+
+@import "_variables"
+@import "_bulma"
+
+.nav-item a, a.nav-item
+  color: #fff
+  &:hover
+    color: yellow
+
+.content
+  margin: 0 auto
+  max-width: 56rem
+  +desktop
+  padding: 3rem
+
+.hero-body
+  .title
+    color: #fff
+
+.hero
+  &.is-gradient
+    background: linear-gradient(135deg, #007ae5 11%, #53cbf1 60%, #87e0fd 94%)
+  .nav
+    box-shadow: unset
+
+.menu-header
+  overflow: unset
+  .menu-item
+    a
+      color: #fff
+    &:hover
+       color: yellow
+    .is-active
+      color: yellow
+
+.menu
+  display: flex
+  .menu-item .dropdown
+    visibility: hidden
+  .menu-item:hover .dropdown
+    visibility: visible
+
+
+.dropdown li
+  padding: 0.5rem 0.75rem
+  background-color: #fffy
+  a
+    color: #fff
+    &:hover
+      color: yellow
