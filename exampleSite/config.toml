@@ -1,0 +1,17 @@
+baseURL = "https://iacf.io/"
+title = "💫 Infrastructure as Coe Foundation (IACF) 🦄"
+languageCode = "en-us"
+theme = "hugo-awesome"
+# theme = "hugo-theme-learn"
+disableHugoGeneratorInject = true
+# publishDir = "docs"
+ignoreFiles = [ "\\.dev$", "\\.backup$", "\\.old$"  ]
+pluralizeListTitles = true
+
+[author]
+  name = "Maik Ellerbrock"
+  homepage = "https://frapsoft.com"
+  github = "https://github.com/ellerbrock"
+  twitter = "https://twitter.com/frapsoft"
+  facebook = "https://www.facebook.com/frapsoft"
+  googleplus = "https://plus.google.com/116540931335841862774"

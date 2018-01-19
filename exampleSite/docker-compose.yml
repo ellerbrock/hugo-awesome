@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  
+  hugo:
+    image: ellerbrock/hugo:latest
+    working_dir: /site
+    command: server --bind 0.0.0.0 -w
+    volumes:
+      - ${DIR_HUGO_DEV}:/site
+    ports:
+      - ${PORT_HUGO}:1313
+    networks:
+      - webdev
+
+  gulp:
+    image: ellerbrock/alpine-gulp-sass
+    volumes:
+      - ${DIR_SASS}:/site/sass
+      - ${DIR_CSS}:/site/css
+    environment:
+      - SASS=${FILES_SASS}
+      - GULP_DEBUG=${GULP_DEBUG}
+    # command: [ "gulp", "sass:watch" ]
+    # stdin_open: true
+    # tty: true
+    # entrypoint: ash
+    # depends_on:
+    #  - hugo
+    networks:
+      - webdev
+
+networks:
+  webdev:
+    driver: bridge
+
